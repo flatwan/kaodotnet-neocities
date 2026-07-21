@@ -118,3 +118,27 @@ body {
     display: flex;
     align-items: stretch;
 }
+.warp-flex-align {
+    display: flex;
+    align-items: center;
+}
+
+
+/*lien sans couleur*/
+.plain_link {
+    color: inherit;          /* Use the surrounding text color */
+    text-decoration: none;   /* Remove underline */
+}
+
+.plain_link:visited {
+    color: inherit;
+}
+
+.plain_link:hover {
+    color: inherit;
+    text-decoration: none;   /* Or add underline here if you want */
+}
+
+.plain_link:active {
+    color: inherit;
+}
