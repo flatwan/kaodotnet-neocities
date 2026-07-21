@@ -41,6 +41,8 @@ html {
 body {
     color: black;
     font-family: "Comic Sans MS", cursive, sans-serif;
+    padding-top: 120px;      /* Adjust to your header's height */
+    padding-bottom: 75px;   /* Adjust to your footer's height */
 }
 
 /*TOP & BOT BARS*/
@@ -109,4 +111,10 @@ body {
 
 .rot_on_hover:hover {
     transform: rotate(20deg);
+}
+
+/*dispositions*/
+.warp-flex {
+    display: flex;
+    align-items: stretch;
 }
