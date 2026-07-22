@@ -57,3 +57,7 @@ ex:
 ```
 
 Ceci appliquera "bliss" comme fond dans toute la page
+
+### rot_on_hover
+
+A appliquer sur une `<img>` pour qu'elle tourne légèrement quand elle est survolée.
