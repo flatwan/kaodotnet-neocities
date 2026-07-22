@@ -222,3 +222,13 @@ body {
 .under_link:active {
     color: inherit;
 }
+
+/*frame*/
+.frame {
+    border: 2px solid black;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white; /* Optional */
+}
