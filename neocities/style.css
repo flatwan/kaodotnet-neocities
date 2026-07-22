@@ -34,7 +34,7 @@
 
 html {
     animation: rwdcur254008 1s linear infinite forwards; /*CURSEUR*/
-    background-image: url("./bliss.jpg?v=1");
+    background-image: url("./resources/bliss.jpg?v=1");
     background-size: cover;
 }
 
