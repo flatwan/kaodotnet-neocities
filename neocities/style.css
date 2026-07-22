@@ -78,12 +78,15 @@ label {
 html {
     animation: rwdcur254008 1s linear infinite forwards; /*CURSEUR NORMAL*/
 }
- 
-.bliss_bg {
-    background-image: url("./resources/bliss.jpg?v=1");
-    background-size: cover;
+
+body {
+   color: black;
+   font-family: "VCR"; /*Font de base du site*/
+   padding-top: 120px;      /* Adjust to your header's height */
+   padding-bottom: 75px;   /* Adjust to your footer's height */
 }
  
+/*FONTS FAMILIES*/
 @font-face { 
 	font-family: "VCR"; 
 	src: url("./resources/VCR_OSD_MONO_1.001.ttf");
@@ -92,12 +95,19 @@ html {
 	font-family: "BIOS"; 
 	src: url("./resources/windows-command-prompt-regular.ttf");
 }
- 
-body {
-    color: black;
-    font-family: "VCR";
-    padding-top: 120px;      /* Adjust to your header's height */
-    padding-bottom: 75px;   /* Adjust to your footer's height */
+@font-face { 
+	font-family: "Dreamland"; 
+	src: url("./resources/DreamlandProRg.OTF");
+}
+
+/*FONDS*/
+.bliss_bg {
+    background-image: url("./resources/bliss.jpg?v=1");
+    background-size: cover;
+}
+.frutiger_bliss_bg {
+    background-image: url("./resources/frutiger_bliss.png?v=1");
+    background-size: cover;
 }
  
 /*TOP & BOT BARS*/
