@@ -1,0 +1,10 @@
+// Pour faire du markdown tout en ayant des elements d'html si besoin
+{
+  "MD033": {
+    "allowed_elements": [
+      "link",
+      "ul",
+      "li"
+    ]
+  }
+}

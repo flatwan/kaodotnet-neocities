@@ -77,6 +77,9 @@ label {
 
 html {
     animation: rwdcur254008 1s linear infinite forwards; /*CURSEUR NORMAL*/
+}
+
+.bliss_bg {
     background-image: url("./resources/bliss.jpg?v=1");
     background-size: cover;
 }
@@ -167,7 +170,7 @@ body {
 }
 
 
-/*lien sans couleur*/
+/*lien sans couleur ni soulignement*/
 .plain_link {
     color: inherit;          /* Use the surrounding text color */
     text-decoration: none;   /* Remove underline */
@@ -183,5 +186,22 @@ body {
 }
 
 .plain_link:active {
+    color: inherit;
+}
+
+/*lien sans couleur avec soulignement*/
+.under_link {
+    color: inherit;          /* Use the surrounding text color */
+}
+
+.under_link:visited {
+    color: inherit;
+}
+
+.under_link:hover {
+    color: inherit;
+}
+
+.under_link:active {
     color: inherit;
 }
