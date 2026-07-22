@@ -154,9 +154,21 @@ body {
 .rot_on_hover {
     transition: transform 0.5s ease;
 }
-
 .rot_on_hover:hover {
     transform: rotate(20deg);
+}
+
+.change_on_hover .change {
+    display: none;
+}
+.change_on_hover:hover .no_change {
+    display: none;
+}
+.change_on_hover:hover .change {
+    display: inline;
+}
+.change_on_hover .no_change {
+    display: inline;
 }
 
 /*dispositions*/

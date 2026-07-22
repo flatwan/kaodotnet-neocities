@@ -4,7 +4,11 @@
     "allowed_elements": [
       "link",
       "ul",
-      "li"
+      "li",
+      "img",
+      "a",
+      "span",
+      "strong"
     ]
   }
 }

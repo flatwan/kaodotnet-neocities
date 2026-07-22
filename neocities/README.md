@@ -60,4 +60,36 @@ Ceci appliquera "bliss" comme fond dans toute la page
 
 ### rot_on_hover
 
-A appliquer sur une `<img>` pour qu'elle tourne légèrement quand elle est survolée.
+A appliquer sur une `<img>` pour qu'elle tourne légèrement
+quand elle est survolée.  
+ex:
+
+```html
+<img class="logo rot_on_hover" src="./resources/flatwan.png?v=1">
+```
+
+rendu:
+
+<img class="logo rot_on_hover" src="./resources/flatwan.png?v=1" alt="monocouille">
+
+### change_on_hover
+
+A appliquer à un text (surtout un `<a>`) pour qu'un texte change de contenu
+quand il est survolé.
+ex:
+
+```html
+<a href="./index.html" class="change_on_hover">
+    <span class="no_change"><strong>kao(dot)net</strong></span>
+    <span class="change"><strong>K40(D0T)N3T</strong></span>
+</a>
+```
+
+rendu:
+
+<a href="./index.html" class="change_on_hover">
+    <span class="no_change"><strong>kao(dot)net</strong></span>
+    <span class="change"><strong>K40(D0T)N3T</strong></span>
+</a>
+
+("kao(dot)net" devient "K40(D0T)N3T")
