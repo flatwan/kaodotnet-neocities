@@ -48,7 +48,7 @@ body {
 /*TOP & BOT BARS*/
 #top_container {
     background-color: rgb(25, 27, 29);
-    background-image: url("./taskbar-upside.png?v=1");
+    background-image: url("./resources/taskbar-upside.png?v=1");
     background-repeat: repeat-x;
     background-position-y: bottom;
     position: fixed;
