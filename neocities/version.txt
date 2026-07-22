@@ -1,2 +1,5 @@
-Current version: 0.2
+Current version: 0.3
 last editor: flatwan
+
+log:
+- 22/07-flatwan: added categories for projects (artworks, videos, games)
