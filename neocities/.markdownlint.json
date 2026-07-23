@@ -9,7 +9,9 @@
       "img",
       "a",
       "span",
-      "strong"
+      "strong",
+      "div",
+      "p"
     ]
   }
 }

@@ -1,5 +1,7 @@
-Current version: 0.3
+Current version: 0.5
 last editor: flatwan
 
 log:
 - 22/07-flatwan: added categories for projects (artworks, videos, games)
+- 23/07-flatwan: added frames
+- 23/07-flatwan: fixed top bar text, changed README
