@@ -231,4 +231,5 @@ body {
     padding: 10px;
     margin: 10px 0;
     background-color: white; /* Optional */
+    width:fit-content;
 }
