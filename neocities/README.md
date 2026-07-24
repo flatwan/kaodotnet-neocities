@@ -2,20 +2,15 @@
 
 <!-- Fait pas gaffe a ca -->
 
-<link href="./style.css?v=1" rel="stylesheet" type="text/css" media="all">
+<link href="./style.css?v=2" rel="stylesheet" type="text/css" media="all">
 
 (Tu peux ouvrir le fichier dans ton navigateur
-
 pour avoir un meilleur affichage stv)
 
 ## INSTRUCTIONS LORS DE LA MODIF DU SITE
 
-- A chaque fois que quelqu'un modif le site de n'importe quel façon,
-il faut updater le fichier "version.txt", en montant de 0.1 la version,
-et en renseignant la dernière personne à avoir modif le site.
-(faut vraiment qu'on passe sur github sinon c'est l'enfer)
-
-- Si une image est updatée, il faut changer sa "version" dans l'html/css.  
+- Si une image ou un css est updatée,
+il faut changer sa "version" dans l'html/css.  
 
 Ca permet aux navigateurs d'automatiquement retélecharger l'image  
 
