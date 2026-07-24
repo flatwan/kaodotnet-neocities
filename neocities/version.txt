@@ -1,9 +1,0 @@
-Current version: 0.7
-last editor: flatwan
-
-log:
-- 22/07-flatwan: added categories for projects (artworks, videos, games)
-- 23/07-flatwan: added frames
-- 23/07-flatwan: fixed top bar text, changed README
-- 23/07-flatwan: added email in contact page & moved scripts
-- 23/07-flatwan: added friends tab
