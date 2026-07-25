@@ -2,7 +2,9 @@
 
 <!-- Fait pas gaffe a ca -->
 
-<link href="./style.css?v=2" rel="stylesheet" type="text/css" media="all">
+
+        <link href="./style.css?v=3" rel="stylesheet" type="text/css" media="all">
+        <link href="./components/bars.css?v=1" rel="stylesheet" type="text/css" media="all">
 
 (Tu peux ouvrir le fichier dans ton navigateur
 pour avoir un meilleur affichage stv)

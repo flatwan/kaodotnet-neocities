@@ -1,0 +1,79 @@
+/*TOP (titlebar, construction)*/
+/*si je met ca que a titlebar ca marche pas*/
+#place-titlebar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+#titlebar {
+    position: relative; /*vu qu'on la deja fait plus haut*/
+    top: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 166, 255, 0.95), rgba(239, 249, 255, 0.8));
+    z-index: 10;
+    width: 100%;
+    display: block;
+}
+#titlebar-content {
+    margin-left: 2vh;
+    display: flex;
+    align-items: center;
+}
+#titlebar-buttons {
+    margin-right: 2vh;
+    margin-left: auto;
+    text-align: right;
+}
+
+#construction {
+    background-color: #FFD800;
+    background-image: url("../resources/construction.png");
+    background-repeat:repeat-x;
+    color:white;
+    text-shadow: black 2px 2px;
+}
+
+
+/*BOTTOM (taskbar)*/
+#place-taskbar {
+    margin-bottom: 12vh; /*Pour que la taskbar soit pas par dessus des elements de la page*/
+}
+#taskbar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0, 166, 255, 0.95), rgba(239, 249, 255, 0.8));
+    color: white;
+    text-align: center;
+    height: 10vh;
+    z-index: 10;
+}
+#taskbar-tasks {
+    margin-left: 2vh;
+}
+.logo {
+    height: 10vh;
+    width: auto;
+    margin-left: 2vh;
+}
+#taskbar-credits {
+    margin-right: 2vh;
+    margin-left: auto;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#taskbar-clock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    color: white;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+}

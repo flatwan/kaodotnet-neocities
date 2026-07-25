@@ -84,6 +84,8 @@ body {
     font-family: "VCR"; /*Font de base du site*/
     margin: 0;
     min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
 
     /*Pour que la bot bar soit tout en bas dans tout les cas*/
     display: flex;
@@ -91,8 +93,29 @@ body {
 }
 
 .actual_body {
-    margin-left: 10vh;
-    flex: 1;
+    margin-left: 5vw;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#main {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#todo {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    max-height: 100%;
 }
  
 /*FONTS FAMILIES*/
@@ -118,48 +141,12 @@ body {
     background-image: url("./resources/frutiger_bliss.png?v=1");
     background-size: cover;
 }
- 
-/*TOP & BOT BARS*/
-#top_container {
-    background-color: rgb(25, 27, 29);
-    background-image: url("./resources/taskbar-upside.png?v=1");
-    background-repeat: repeat-x;
-    background-position-y: bottom;
-    /* position: fixed; */ /*A voir si je reactive*/
-    top: 0;
-    left: 0;
-    width: 100%;
-    color:white;
+.missing_bg {
+    background-image: url("./resources/missing.png");
+    background-repeat: repeat;
+    background-size:25%
 }
-/* #top_bar {
-} */
-#construction {
-    background-color: rgb(255, 216, 0);
-    background-image: url("./resources/construction.png?v=1");
-    background-repeat: repeat-x;
-    color:white;
-    text-shadow: 2px 2px black; /*reste en px*/
-    width: 100%;
-}
-#header_area {
-    text-indent: 1vw; /*Espace mieux les trucs dans la barre*/
-}
-.logo {
-    height: 12vh;
-    width: auto;
-}
- 
-#bot_bar {
-    background-color: rgb(25, 27, 29);
-    background-image: url("./resources/taskbar.png?v=1");
-    background-repeat: repeat-x;
-    /* position: fixed; */ /*A voir si je reactive*/
-    left: 0;
-    width: 100%;
-    color:white;
-    text-indent: 1vw; /*Espace mieux les trucs dans la barre*/
-    margin-top: auto;
-}
+
  
 /*CHECKLIST*/
 .checklist {
@@ -240,7 +227,28 @@ body {
     border: solid black;
     border-radius: 1.5%;
     border-width: 0.2vw;
-    padding: 1%;
+    padding-left: 0;
     background-color: white;
-    width:fit-content;
+    width: fit-content;
+    max-width: 100%;
+    
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+.full-hr {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-top: 0.2vw solid black;
+}
+#todo {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    max-height: 100%;
+    width: auto;
 }
