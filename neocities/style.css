@@ -146,7 +146,7 @@ body {
     background-size: cover;
 }
 /*Fenetre*/
-.window_bg {
+.window_bg { /*a mettre accompagne d'un fond ci dessous*/
     flex: 1 1 auto;
     min-height: 0;
     overflow-y: auto;
@@ -162,6 +162,9 @@ body {
     background-image: url("./resources/missing.png");
     background-repeat: repeat;
     background-size:25%;
+}
+.white_bg {
+    background-color:white;
 }
 
  

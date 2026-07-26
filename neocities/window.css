@@ -25,18 +25,29 @@
     border-top: 0.2vw solid rgba(0, 166, 255, 0.95); /*modif full-hr*/
 }
 
+.desk {
+    display: flex;
+}
 .desk_icon {
     margin-top: 3vh;
     padding-top: 0; 
     width: fit-content;
     animation: rwdcur254000 1s linear infinite forwards; /*CURSEUR HOVER/SELECT*/
     /* background-color: white; */ /*DEBUG*/
+    padding-right: 1vw;
 }
 .desk_icon-icon {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 8vw;
+  height: auto;
+}
+.desk_icon-bigicon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 16vw;
   height: auto;
 }
 .desk_icon-text {
