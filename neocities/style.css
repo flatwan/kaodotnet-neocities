@@ -94,6 +94,7 @@ body {
 
 .actual_body {
     margin-left: 5vw;
+    margin-right: 5vw;
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
@@ -110,7 +111,6 @@ body {
 } */
 
 #todo {
-    flex: 1 1 auto;
     min-height: 0;
     overflow-y: auto;
     overflow-x: hidden;
@@ -247,23 +247,27 @@ body {
     border: solid black;
     border-radius: 1.5%;
     border-width: 0.2vw;
-    padding-left: 0;
-    padding-top: 0;
-    margin-left: 0;
-    margin-top: 0;
+
+    padding: 0;
+    margin: 0;
+
     background-color: white;
+
     width: fit-content;
     max-width: 100%;
-    
+
     box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
+
     min-height: 0;
+
     overflow: hidden;
 }
 .full-hr {
     display: block;
-    width: 100%;
+    /* width: 100%; */
     border: 0;
     border-top: 0.2vw solid black;
 }

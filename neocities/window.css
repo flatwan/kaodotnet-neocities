@@ -1,34 +1,64 @@
 .window {
-    border: solid rgba(0, 166, 255, 0.95); /*modif bord de frame*/
-    margin-top:1vh;
-    margin-bottom:1vh;
-}
-.window-titlebar {
-    align-items: start; 
-    display: flex; 
-    height:min-content;
-    background-image: linear-gradient(to bottom, rgba(0, 166, 255, 0.95), rgba(239, 249, 255, 0.8));
-}
-.window-titlebar-title {
-    margin-top:1%; 
-    margin-bottom:0; 
-    padding-left: 2%;
-}
-.window-titlebar-buttons {
-    margin-top:1%; 
-    margin-bottom:0; 
-    margin-right: 2%; 
-    margin-left: auto; 
-    text-align: right;
-}
-.window-seperation {
-    border-top: 0.2vw solid rgba(0, 166, 255, 0.95); /*modif full-hr*/
+    border: solid rgba(0, 166, 255, 0.95);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+    display: inline-block;
+    width: max-content;
+    max-width: 100%;
 }
 
-.desk {
+.window-titlebar {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 166, 255, 0.95),
+        rgba(239, 249, 255, 0.8)
+    );
+
+    padding: 0.3em 0.5em;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    white-space: nowrap;
 }
-.desk_icon {
+.window-titlebar-title {
+    margin: 0;
+    padding-left: 0.5em;
+
+    white-space: nowrap;
+}
+.window-titlebar-left {
+    display: flex;
+    align-items: center;
+}
+.window-titlebar-buttons {
+    margin: 0;
+    padding-left: 1em;
+
+    white-space: nowrap;
+}
+
+.window-seperation {
+    border-top: 0.2vw solid rgba(0, 166, 255, 0.95);
+}
+
+.window-content {
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+/*Icones de bureau/explorer (ne pas mettre dans window-content)*/
+.explorer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:1vw;
+}
+.explorer_icon {
     margin-top: 3vh;
     padding-top: 0; 
     width: fit-content;
@@ -36,21 +66,21 @@
     /* background-color: white; */ /*DEBUG*/
     padding-right: 1vw;
 }
-.desk_icon-icon {
+.explorer_icon-icon {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 8vw;
   height: auto;
 }
-.desk_icon-bigicon {
+.explorer_icon-bigicon {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 16vw;
   height: auto;
 }
-.desk_icon-text {
+.explorer_icon-text {
     text-align: center;
     margin-top: 1%;
 }

@@ -30,16 +30,21 @@
 
 
         <div class="actual_body">
-            <div class="frame window"> 
+            <div class="frame window"> <!-- SI PAGE FENETREE PARTIELLE -->
                 <div class="window-titlebar">
-                    <img src="./resources/text_icon.png?v=1" height="25vh" style="margin-left: 1%; margin-top: 1%;">
-                    <h2 class="window-titlebar-title">TODO:</h2>
-                    <h2 class="window-titlebar-buttons">_ O <a class="plain_link" href="./index.html">X</a></h2>
+                    <div class="window-titlebar-left">
+                        <img src="./resources/text_icon.png?v=1" height="25">
+                        <h2 class="window-titlebar-title">todo.txt</h2>
+                    </div>
+
+                    <div class="window-titlebar-buttons">
+                        <h2><a class="plain_link" href="./index.html">_ O X</a></h2>
+                    </div>
                 </div>
 
                 <hr class="full-hr window-seperation">
-
-                <section id="todo" style="padding-left: 2%;">
+                <!-- Contenu de la fenetre -->
+                <div class="window-content">
                     <ul class="checklist">
                         <li class="done">   Initial page setup</li>
                         <li class="done">   Add divs</li>
@@ -78,7 +83,7 @@
                         <li>                Upgrade explorer pages</li>
                         <li>                Placeholder projects</li>
                     </ul>
-                </section>
+                </div>
             </div>
         </div>
 
