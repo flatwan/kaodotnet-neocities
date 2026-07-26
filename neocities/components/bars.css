@@ -5,6 +5,8 @@
     top: 0;
     z-index: 10;
     width: 100%;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 #titlebar {
@@ -14,30 +16,44 @@
     z-index: 10;
     width: 100%;
     display: block;
+    border: solid rgba(0, 166, 255, 0.95); /*modif bord de frame*/
+    border-width: 0.2vw;
+    margin-top: 0;
+    padding-top: 0;
 }
 #titlebar-content {
     margin-left: 2vh;
     display: flex;
     align-items: center;
 }
+#titlebar-name {
+    margin-left: 2vh;
+    margin-right: auto;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 #titlebar-buttons {
     margin-right: 2vh;
     margin-left: auto;
     text-align: right;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-#construction {
+/* INUTILISE */
+/* #construction {
     background-color: #FFD800;
     background-image: url("../resources/construction.png");
     background-repeat:repeat-x;
     color:white;
     text-shadow: black 2px 2px;
-}
+} */
 
 
 /*BOTTOM (taskbar)*/
 #place-taskbar {
-    margin-bottom: 12vh; /*Pour que la taskbar soit pas par dessus des elements de la page*/
+    margin-bottom: 10vh; /*Pour que la taskbar soit pas par dessus des elements de la page*/
 }
 #taskbar {
     position: fixed;
@@ -53,10 +69,18 @@
 #taskbar-tasks {
     margin-left: 2vh;
 }
-.logo {
+.icon {
     height: 10vh;
     width: auto;
     margin-left: 2vh;
+    margin-top: 1vh;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.bright_bg_hover {
+    transition: background-color 0.5s ease;
+}
+.bright_bg_hover:hover {
+    background-color: rgba(255, 255, 255, 0.4);
 }
 #taskbar-credits {
     margin-right: 2vh;

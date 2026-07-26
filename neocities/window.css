@@ -1,0 +1,45 @@
+.window {
+    border: solid rgba(0, 166, 255, 0.95); /*modif bord de frame*/
+    margin-top:1vh;
+    margin-bottom:1vh;
+}
+.window-titlebar {
+    align-items: start; 
+    display: flex; 
+    height:min-content;
+    background-image: linear-gradient(to bottom, rgba(0, 166, 255, 0.95), rgba(239, 249, 255, 0.8));
+}
+.window-titlebar-title {
+    margin-top:1%; 
+    margin-bottom:0; 
+    padding-left: 2%;
+}
+.window-titlebar-buttons {
+    margin-top:1%; 
+    margin-bottom:0; 
+    margin-right: 2%; 
+    margin-left: auto; 
+    text-align: right;
+}
+.window-seperation {
+    border-top: 0.2vw solid rgba(0, 166, 255, 0.95); /*modif full-hr*/
+}
+
+.desk_icon {
+    margin-top: 3vh;
+    padding-top: 0; 
+    width: fit-content;
+    animation: rwdcur254000 1s linear infinite forwards; /*CURSEUR HOVER/SELECT*/
+    /* background-color: white; */ /*DEBUG*/
+}
+.desk_icon-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8vw;
+  height: auto;
+}
+.desk_icon-text {
+    text-align: center;
+    margin-top: 1%;
+}

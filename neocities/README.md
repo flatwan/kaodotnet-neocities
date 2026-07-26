@@ -54,7 +54,7 @@ ex:
 ```html
 <!-- html -->
 
-<html class="bliss_bg">
+<html class="desktop_bg">
 
     ...
 
@@ -64,7 +64,7 @@ ex:
 ```css
 /* css */
 
-.bliss_bg {
+.desktop_bg {
     background-image: url("./resources/bliss.jpg?v=1");
     background-size: cover;
 }

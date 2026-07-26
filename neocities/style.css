@@ -100,14 +100,14 @@ body {
     min-height: 0;
     overflow: hidden;
 }
-
+/* 
 #main {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     min-height: 0;
     overflow: hidden;
-}
+} */
 
 #todo {
     flex: 1 1 auto;
@@ -132,10 +132,27 @@ body {
 	src: url("./resources/DreamlandProRg.OTF");
 }
 
+.logo {
+    height: 10vh;
+    width: auto;
+    margin-left: 2vh;
+    margin-top: 1vh;
+}
+
 /*FONDS*/
-.bliss_bg {
+/*Bureau*/
+.desktop_bg {
     background-image: url("./resources/bliss.jpg?v=1");
     background-size: cover;
+}
+/*Fenetre*/
+.window_bg {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    max-height: 100%;
 }
 .frutiger_bliss_bg {
     background-image: url("./resources/frutiger_bliss.png?v=1");
@@ -144,7 +161,7 @@ body {
 .missing_bg {
     background-image: url("./resources/missing.png");
     background-repeat: repeat;
-    background-size:25%
+    background-size:25%;
 }
 
  
@@ -228,6 +245,9 @@ body {
     border-radius: 1.5%;
     border-width: 0.2vw;
     padding-left: 0;
+    padding-top: 0;
+    margin-left: 0;
+    margin-top: 0;
     background-color: white;
     width: fit-content;
     max-width: 100%;
@@ -236,6 +256,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 0;
+    overflow: hidden;
 }
 .full-hr {
     display: block;
