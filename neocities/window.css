@@ -87,3 +87,61 @@
     text-align: center;
     margin-top: 1%;
 }
+
+/*Layout MSN*/
+.msn {
+    display: flex;
+    align-items: flex-start;
+    gap: 1vw;
+}
+/* .msn-pic {
+    position: relative;
+}
+.msn-pic-frame {
+    position: relative;
+    z-index: 1;
+}
+.msn-pic-frame img {
+    height: 20vh;
+    width: auto;
+}
+.msn-pic-child {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 0;
+}
+.msn-pic-child img {
+    width: 100%;
+    height: auto;
+} */
+
+
+/* .msn-left {
+} */
+
+/* .msn-right {
+} */
+ .msn-pic {
+    position: relative;
+    display: inline-block;
+}
+
+.msn-pic-frame {
+    position: relative;
+    z-index: 2;
+}
+
+/* .msn-pic-child {
+    -webkit-mask-image: url("./resources/msn_frame.png");
+    mask-image: url("./resources/msn_frame.png");
+
+    -webkit-mask-composite: exclude;
+    mask-composite: exclude;
+} */
+
+.msn-pic-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
