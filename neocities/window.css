@@ -2,10 +2,9 @@
     border: solid rgba(0, 166, 255, 0.95);
     margin-top: 1vh;
     margin-bottom: 1vh;
-
-    display: inline-block;
     width: max-content;
     max-width: 100%;
+    max-height: calc(100vh - 2vh); /*pour compter les margin et pas depasser de la page*/
 }
 
 .window-titlebar {
@@ -44,12 +43,16 @@
 }
 
 .window-seperation {
+    width: 100%;
+    margin: 0;
+    border: 0;
     border-top: 0.2vw solid rgba(0, 166, 255, 0.95);
 }
 
 .window-content {
     padding-left: 1vw;
     padding-right: 1vw;
+    overflow-y: auto; /*Scroll si besoin, sinon non*/
 }
 
 /*Icones de bureau/explorer (ne pas mettre dans window-content)*/
