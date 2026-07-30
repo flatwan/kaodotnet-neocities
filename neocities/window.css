@@ -60,6 +60,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left:1vw;
+    margin-right:1vw;
 }
 .explorer_icon {
     margin-top: 3vh;
@@ -67,10 +68,10 @@
     width: fit-content;
     animation: rwdcur254000 1s linear infinite forwards; /*CURSEUR HOVER/SELECT*/
     /* background-color: white; */ /*DEBUG*/
-    padding-right: 1vw;
 }
 .explorer_icon.selected {
     background-color: rgba(49, 106, 197, 0.35);
+    /* SI UNE IMAGE REMPLI AU MAX, ON VOIT PAS BEAUCOUP LA SELECTION MAIS TANT PIS */
 }
 .explorer_icon-icon {
   display: block;
