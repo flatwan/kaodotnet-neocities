@@ -2,7 +2,9 @@
 
 <!-- Fait pas gaffe a ca -->
 
-<link href="./style.css?v=2" rel="stylesheet" type="text/css" media="all">
+
+        <link href="./style.css?v=3" rel="stylesheet" type="text/css" media="all">
+        <link href="./components/bars.css?v=1" rel="stylesheet" type="text/css" media="all">
 
 (Tu peux ouvrir le fichier dans ton navigateur
 pour avoir un meilleur affichage stv)
@@ -52,7 +54,7 @@ ex:
 ```html
 <!-- html -->
 
-<html class="bliss_bg">
+<html class="desktop_bg">
 
     ...
 
@@ -62,7 +64,7 @@ ex:
 ```css
 /* css */
 
-.bliss_bg {
+.desktop_bg {
     background-image: url("./resources/bliss.jpg?v=1");
     background-size: cover;
 }

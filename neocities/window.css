@@ -1,0 +1,158 @@
+.window {
+    border: solid rgba(0, 166, 255, 0.95);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: max-content;
+    max-width: 100%;
+    max-height: calc(100vh - 2vh); /*pour compter les margin et pas depasser de la page*/
+}
+
+.window-titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 166, 255, 0.95),
+        rgba(239, 249, 255, 0.8)
+    );
+
+    padding: 0.3em 0.5em;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+.window-titlebar-title {
+    margin: 0;
+    padding-left: 0.5em;
+
+    white-space: nowrap;
+}
+.window-titlebar-left {
+    display: flex;
+    align-items: center;
+}
+.window-titlebar-buttons {
+    margin: 0;
+    padding-left: 1em;
+
+    white-space: nowrap;
+}
+
+.window-seperation {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-top: 0.2vw solid rgba(0, 166, 255, 0.95);
+}
+
+.window-content {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    overflow-y: auto; /*Scroll si besoin, sinon non*/
+}
+
+/*Icones de bureau/explorer (ne pas mettre dans window-content)*/
+.explorer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:1vw;
+}
+.explorer_icon {
+    margin-top: 3vh;
+    padding-top: 0; 
+    width: fit-content;
+    animation: rwdcur254000 1s linear infinite forwards; /*CURSEUR HOVER/SELECT*/
+    /* background-color: white; */ /*DEBUG*/
+    padding-right: 1vw;
+}
+.explorer_icon.selected {
+    background-color: rgba(49, 106, 197, 0.35);
+}
+.explorer_icon-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8vw;
+  height: auto;
+}
+.explorer_icon-bigicon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 16vw;
+  height: auto;
+}
+.explorer_icon-text {
+    text-align: center;
+    margin-top: 1%;
+}
+
+/*Layout MSN*/
+.msn {
+    display: flex;
+    align-items: flex-start;
+    gap: 1vw;
+}
+/* .msn-pic {
+    position: relative;
+}
+.msn-pic-frame {
+    position: relative;
+    z-index: 1;
+}
+.msn-pic-frame img {
+    height: 20vh;
+    width: auto;
+}
+.msn-pic-child {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 0;
+}
+.msn-pic-child img {
+    width: 100%;
+    height: auto;
+} */
+
+
+/* .msn-left {
+} */
+
+/* .msn-right {
+} */
+ .msn-pic {
+    position: relative;
+    display: inline-block;
+}
+
+.msn-pic-frame {
+    position: relative;
+    z-index: 2;
+}
+
+/* .msn-pic-child {
+    -webkit-mask-image: url("./resources/msn_frame.png");
+    mask-image: url("./resources/msn_frame.png");
+
+    -webkit-mask-composite: exclude;
+    mask-composite: exclude;
+} */
+
+.msn-pic-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member_list {
+    gap:1%;
+}
+
+.member {
+    gap:3%;
+}
