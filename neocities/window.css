@@ -145,3 +145,11 @@
     height: 100%;
     object-fit: cover;
 }
+
+.member_list {
+    gap:1%;
+}
+
+.member {
+    gap:3%;
+}
