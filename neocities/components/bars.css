@@ -60,7 +60,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-image: url("../resources/botbar-grad.png");
+    background-image: url("../resources/botbar-grad.png?v=1");
     background-repeat: repeat-x;
     background-size: auto 80px;
     color: white;
