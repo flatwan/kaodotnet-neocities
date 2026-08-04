@@ -60,21 +60,25 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-image: linear-gradient(to top, rgba(0, 166, 255, 0.95), rgba(239, 249, 255, 0.8));
+    background-image: url("../resources/botbar-grad.png?v=1");
+    background-repeat: repeat-x;
+    background-size: auto 80px;
     color: white;
     text-align: center;
-    height: 10vh;
+    height: 80px;
     z-index: 10;
 }
 #taskbar-tasks {
     margin-left: 2vh;
 }
 .icon {
-    height: 10vh;
-    width: auto;
     margin-left: 2vh;
     margin-top: 1vh;
     background-color: rgba(255, 255, 255, 0.1);
+}
+.icon img {
+    height: 80px;
+    width: auto;
 }
 .bright_bg_hover {
     transition: background-color 0.5s ease;

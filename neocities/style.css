@@ -77,6 +77,9 @@ label {
  
 html {
     animation: rwdcur254008 1s linear infinite forwards; /*CURSEUR NORMAL*/
+
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
 body {
@@ -245,7 +248,7 @@ body {
 /*frame*/
 .frame {
     border: solid black;
-    border-radius: 1.5%;
+    /* border-radius: 1.5%; */
     border-width: 0.2vw;
 
     padding: 0;
