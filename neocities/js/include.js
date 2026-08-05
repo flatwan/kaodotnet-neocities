@@ -42,15 +42,15 @@ function applyTitlebarTitle() {
 
 loadScript("./js/time.js")
     .then(() => {
-        fetch("./components/top_bar.html")
-            .then(response => {
-                console.log(response.status);
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById("place-titlebar").innerHTML = data;
-                applyTitlebarTitle();
-            })
+        // fetch("./components/top_bar.html")
+        //     .then(response => {
+        //         console.log(response.status);
+        //         return response.text();
+        //     })
+        //     .then(data => {
+        //         document.getElementById("place-titlebar").innerHTML = data;
+        //         applyTitlebarTitle();
+        //     })
         return Promise.all([
             fetch("./components/bot_bar.html")
                 .then(response => {

@@ -1,6 +1,6 @@
 /*TOP (titlebar, construction)*/
 /*si je met ca que a titlebar ca marche pas*/
-#place-titlebar {
+/* #place-titlebar {
     position: sticky;
     top: 0;
     z-index: 10;
@@ -10,13 +10,13 @@
 }
 
 #titlebar {
-    position: relative; /*vu qu'on la deja fait plus haut*/
+    position: relative; 
     top: 0;
     background-image: linear-gradient(to bottom, rgba(0, 166, 255, 0.95), rgba(239, 249, 255, 0.8));
     z-index: 10;
     width: 100%;
     display: block;
-    border: solid rgba(0, 166, 255, 0.95); /*modif bord de frame*/
+    border: solid rgba(0, 166, 255, 0.95); 
     border-width: 0.2vw;
     margin-top: 0;
     padding-top: 0;
@@ -40,6 +40,7 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+*/
 
 /* INUTILISE */
 /* #construction {
