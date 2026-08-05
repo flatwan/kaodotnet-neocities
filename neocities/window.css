@@ -56,9 +56,13 @@
 }
 
 .window-content {
+    background-color: transparent;
     padding-left: 1vw;
     padding-right: 1vw;
     overflow-y: auto; /*Scroll si besoin, sinon non*/
+    background-image: url("./resources/window-grad_bg.png?v=1");
+    background-position: bottom right;
+    background-size: cover;
 }
 
 /*Icones de bureau/explorer (ne pas mettre dans window-content)*/
