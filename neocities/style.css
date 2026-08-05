@@ -147,6 +147,7 @@ body {
 .desktop_bg {
     background-image: url("./resources/bliss.jpg?v=1");
     background-size: cover;
+    background-position: center;
 }
 /*Fenetre*/
 .window_bg { /*a mettre accompagne d'un fond ci dessous*/
