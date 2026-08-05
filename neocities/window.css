@@ -1,3 +1,5 @@
+
+
 .window {
     border: solid #7a7a7a;
     border-width: 6px;
@@ -6,6 +8,12 @@
     width: max-content;
     max-width: 100%;
     max-height: calc(100vh - 2vh); /*pour compter les margin et pas depasser de la page*/
+
+    background-color: transparent;
+}
+
+.frame.window {
+    background-color: transparent !important;
 }
 
 .window-titlebar {
@@ -59,10 +67,12 @@
     background-color: transparent;
     padding-left: 1vw;
     padding-right: 1vw;
-    overflow-y: auto; /*Scroll si besoin, sinon non*/
+    overflow-y: auto;
+
     background-image: url("./resources/window-grad_bg.png?v=1");
     background-position: bottom right;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /*Icones de bureau/explorer (ne pas mettre dans window-content)*/
