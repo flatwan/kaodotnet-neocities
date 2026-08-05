@@ -7,7 +7,6 @@
     margin-bottom: 1vh;
     width: max-content;
     max-width: 100%;
-    max-height: calc(100vh - 2vh); /*pour compter les margin et pas depasser de la page*/
 
     background-color: transparent;
 }

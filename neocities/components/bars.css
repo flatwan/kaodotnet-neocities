@@ -53,7 +53,7 @@
 
 /*BOTTOM (taskbar)*/
 #place-taskbar {
-    margin-bottom: 10vh; /*Pour que la taskbar soit pas par dessus des elements de la page*/
+    margin-bottom: 5px; /*Pour que la taskbar soit pas par dessus des elements de la page*/
 }
 #taskbar {
     position: fixed;

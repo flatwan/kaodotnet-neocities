@@ -103,6 +103,7 @@ body {
     flex-direction: column;
     min-height: 0;
     overflow: hidden;
+    max-height: calc(100% - 85px); /*pour compter les margin et pas depasser de la page*/
 }
 /* 
 #main {
