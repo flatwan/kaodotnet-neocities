@@ -95,7 +95,7 @@ body {
     flex-direction: column;
 }
 
-.actual_body {
+main {
     margin-left: 5vw;
     margin-right: 5vw;
     flex: 1 1 auto;

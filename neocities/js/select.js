@@ -1,22 +1,23 @@
 // PAS MON CODE
-document.addEventListener("DOMContentLoaded", () => {
-    const icons = document.querySelectorAll(".explorer_icon");
+function initExplorerSelection(root = document) {
+    const icons = root.querySelectorAll(".explorer_icon");
 
     icons.forEach(icon => {
         icon.addEventListener("click", e => {
-            // Remove previous selection
-            icons.forEach(i => i.classList.remove("selected"));
-
-            // Select clicked icon
+            document.querySelectorAll(".explorer_icon").forEach(i => i.classList.remove("selected"));
             icon.classList.add("selected");
-
-            // Don't let the document click handler run
             e.stopPropagation();
         });
     });
 
-    // Clicking anywhere else deselects everything
-    document.addEventListener("click", () => {
-        icons.forEach(i => i.classList.remove("selected"));
-    });
+    if (!window.__explorerSelectionDocumentClickInstalled) {
+        document.addEventListener("click", () => {
+            document.querySelectorAll(".explorer_icon").forEach(i => i.classList.remove("selected"));
+        });
+        window.__explorerSelectionDocumentClickInstalled = true;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    initExplorerSelection();
 });
