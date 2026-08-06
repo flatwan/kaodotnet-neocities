@@ -26,47 +26,53 @@ function loadScript(src) {
     });
 }
 
-function applyTitlebarTitle() {
-    const titlebarContainer = document.getElementById("place-titlebar");
-    const titlebarName = titlebarContainer?.querySelector("#titlebar-name");
+function loadComponentIntoElement(element, url, onLoaded, options = {}) {
+    const { forceRefresh = false } = options;
 
-    if (!titlebarName) {
-        return;
+    if (!element) {
+        return Promise.resolve();
     }
 
-    const customTitle = titlebarContainer?.dataset.title?.trim();
-    const resolvedTitle = customTitle || document.title?.trim() || "kao(dot)net";
+    if (!forceRefresh && (element.dataset.loaded === "true" || element.innerHTML.trim())) {
+        if (typeof onLoaded === "function") {
+            onLoaded(element);
+        }
+        return Promise.resolve();
+    }
 
-    titlebarName.textContent = resolvedTitle;
+    return fetch(url, { credentials: "same-origin" })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to fetch ${url}: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            element.innerHTML = data;
+            element.dataset.loaded = "true";
+
+            if (typeof onLoaded === "function") {
+                onLoaded(element);
+            }
+        });
 }
 
-loadScript("./js/time.js")
-    .then(() => {
-        // fetch("./components/top_bar.html")
-        //     .then(response => {
-        //         console.log(response.status);
-        //         return response.text();
-        //     })
-        //     .then(data => {
-        //         document.getElementById("place-titlebar").innerHTML = data;
-        //         applyTitlebarTitle();
-        //     })
-        return Promise.all([
-            fetch("./components/bot_bar.html")
-                .then(response => {
-                    console.log(response.status);
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById("place-taskbar").innerHTML = data;
-                })
-        ]);
-    })
-    .then(() => {
-        if (typeof window.initTaskbarClock === "function") {
-            window.initTaskbarClock();
+function loadSharedIncludes(root = document, options = {}) {
+    const { forceRefresh = false } = options;
+    const titlebar = root.getElementById("place-titlebar");
+    const taskbar = root.getElementById("place-taskbar");
+    const msn = root.getElementById("place-msn");
+
+    const titlebarPromise = loadComponentIntoElement(titlebar, "./components/top_bar.html", () => {
+        if (typeof window.applyTitlebarTitle === "function") {
+            window.applyTitlebarTitle();
         }
-    })
-    .catch(error => {
-        console.error(error);
     });
+
+    const taskbarPromise = loadComponentIntoElement(taskbar, "./components/bot_bar.html");
+    const msnPromise = loadComponentIntoElement(msn, "./components/msn.html", null, { forceRefresh });
+
+    return Promise.all([titlebarPromise, taskbarPromise, msnPromise]);
+}
+
+window.loadSharedIncludes = loadSharedIncludes;
