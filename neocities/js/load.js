@@ -124,15 +124,21 @@ function initLinkInterception(root = document) {
 }
 
 function swapMainContent(newDoc) {
-    const newMain = newDoc.querySelector('main');
-    const currentMain = document.querySelector('main');
+    const newMain = newDoc.querySelector("main");
+    const currentMain = document.querySelector("main");
 
     if (!newMain || !currentMain) {
         return;
     }
 
     currentMain.innerHTML = newMain.innerHTML;
+
+    // Récupère les classes du <body> de la nouvelle page
     document.body.className = newDoc.body.className;
+
+    // Récupère les classes du <html> de la nouvelle page
+    document.documentElement.className =
+        newDoc.documentElement.className;
 }
 
 function navigateTo(url, replaceState = false) {
