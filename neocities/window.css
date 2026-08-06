@@ -5,8 +5,16 @@
     margin-bottom: 1vh;
     width: max-content;
     max-width: 100%;
+    max-height: calc(100vh - 120px);
+    min-height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
 
     background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
 }
 
 .frame.window {
@@ -64,7 +72,14 @@
     background-color: transparent;
     padding-left: 1vw;
     padding-right: 1vw;
+    padding-bottom: 2vh;
     overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    min-height: 0;
+    flex: 1 1 auto;
+    height: auto;
+    overscroll-behavior: contain;
 
     background-image: url("./resources/window-grad_bg.png?v=1");
     background-position: bottom right;
@@ -112,8 +127,27 @@
 /*Layout MSN*/
 .msn {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 1vw;
+}
+.msn a {
+    color:inherit;
+    text-decoration: none;
+}
+.msn a:visited {
+    color:inherit;
+}
+.msn a:hover {
+    color:cornflowerblue;
+    text-decoration: dotted;
+}
+.msn a:active {
+    color:blueviolet;
+    text-decoration: solid;
+}
+.msn.current a {
+    color:blueviolet;
+    text-decoration: solid;
 }
 
 .msn-pic {
@@ -135,12 +169,4 @@
 .msn-pic-frame img {
     width: 80px;
     height: 80px;
-}
-
-.member_list {
-    gap:1%;
-}
-
-.member {
-    gap:3%;
 }

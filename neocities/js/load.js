@@ -77,6 +77,10 @@ function runInlineScripts(container) {
 function initLinkInterception(root = document) {
     const anchors = root.querySelectorAll('a[href]');
     anchors.forEach(anchor => {
+        if (anchor.dataset.intercepted === 'true') {
+            return;
+        }
+
         const href = anchor.getAttribute('href');
         if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) {
             return;
@@ -91,6 +95,7 @@ function initLinkInterception(root = document) {
             return;
         }
 
+        anchor.dataset.intercepted = 'true';
         anchor.addEventListener('click', event => {
             if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
                 return;
@@ -102,12 +107,16 @@ function initLinkInterception(root = document) {
 
     const dblclickables = root.querySelectorAll('[ondblclick]');
     dblclickables.forEach(el => {
+        if (el.dataset.intercepted === 'true') {
+            return;
+        }
+
         const value = el.getAttribute('ondblclick');
         if (!value) {
             return;
         }
 
-        const match = value.match(/window\.location\s*=\s*['\"](.+?)['\"]/);
+        const match = value.match(/window\.location\s*=\s*['"](.+?)['"]/);
         if (!match) {
             return;
         }
@@ -117,29 +126,63 @@ function initLinkInterception(root = document) {
             return;
         }
 
+        el.dataset.intercepted = 'true';
         el.ondblclick = () => {
             navigateTo(targetUrl.href);
         };
     });
 }
 
+function isPersistentPlaceholder(node) {
+    if (node.nodeType !== Node.ELEMENT_NODE) {
+        return false;
+    }
+
+    return node.hasAttribute('data-persistent') ||
+        ['place-titlebar', 'place-taskbar'].includes(node.id);
+}
+
 function swapMainContent(newDoc) {
-    const newMain = newDoc.querySelector("main");
-    const currentMain = document.querySelector("main");
+    const newMain = newDoc.querySelector('main');
+    const currentMain = document.querySelector('main');
 
     if (!newMain || !currentMain) {
         return;
     }
 
-    currentMain.innerHTML = newMain.innerHTML;
+    Array.from(currentMain.childNodes).forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE) {
+            node.remove();
+            return;
+        }
+
+        if (node.nodeType === Node.ELEMENT_NODE && isPersistentPlaceholder(node)) {
+            return;
+        }
+
+        node.remove();
+    });
+
+    Array.from(newMain.childNodes).forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE && !node.textContent.trim()) {
+            return;
+        }
+
+        if (node.nodeType === Node.ELEMENT_NODE && isPersistentPlaceholder(node)) {
+            return;
+        }
+
+        currentMain.appendChild(node.cloneNode(true));
+    });
 
     // Récupère les classes du <body> de la nouvelle page
     document.body.className = newDoc.body.className;
 
     // Récupère les classes du <html> de la nouvelle page
-    document.documentElement.className =
-        newDoc.documentElement.className;
+    document.documentElement.className = newDoc.documentElement.className;
 }
+
+window.initLinkInterception = initLinkInterception;
 
 function navigateTo(url, replaceState = false) {
     const targetUrl = getInternalUrl(url);
@@ -169,17 +212,24 @@ function navigateTo(url, replaceState = false) {
             }
 
             swapMainContent(newDoc);
-            runInlineScripts(document.querySelector('main'));
-            initLinkInterception(document.querySelector('main'));
-            if (typeof window.initExplorerSelection === 'function') {
-                window.initExplorerSelection(document.querySelector('main'));
-            }
-            applyTitlebarTitle();
-            window.scrollTo(0, 0);
+            const contentRoot = document.querySelector('[data-page-content]') || document.querySelector('main');
+            runInlineScripts(contentRoot);
+            initLinkInterception(document);
 
             const newScripts = Array.from(newDoc.querySelectorAll('script[src]')).map(script => script.getAttribute('src')).filter(Boolean);
             const scriptsToLoad = newScripts.filter(src => !document.querySelector(`script[src="${src}"]`));
-            return Promise.all(scriptsToLoad.map(loadScript));
+
+            return Promise.all([
+                ...scriptsToLoad.map(loadScript),
+                window.loadSharedIncludes ? window.loadSharedIncludes(document, { forceRefresh: true }) : Promise.resolve()
+            ]).then(() => {
+                initLinkInterception(document);
+                if (typeof window.initExplorerSelection === 'function') {
+                    window.initExplorerSelection(contentRoot);
+                }
+                applyTitlebarTitle();
+                window.scrollTo(0, 0);
+            });
         })
         .then(() => {
             if (replaceState) {
@@ -200,6 +250,7 @@ window.addEventListener('popstate', event => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
+    ensurePageContentContainer(document);
     history.replaceState({ url: location.pathname }, document.title, location.pathname);
     initLinkInterception(document);
     applyTitlebarTitle();
@@ -207,38 +258,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
 loadScript("./js/time.js")
     .then(() => {
-        const titlebarPromise = fetch("./components/top_bar.html")
-            .then(response => {
-                console.log(response.status);
-                return response.text();
-            })
-            .then(data => {
-                const titlebar = document.getElementById("place-titlebar");
-                if (titlebar) {
-                    titlebar.innerHTML = data;
-                    applyTitlebarTitle();
-                    initLinkInterception(titlebar);
-                }
-            });
+        if (typeof window.loadSharedIncludes === "function") {
+            return window.loadSharedIncludes(document);
+        }
 
-        const taskbarPromise = fetch("./components/bot_bar.html")
-            .then(response => {
-                console.log(response.status);
-                return response.text();
-            })
-            .then(data => {
-                const taskbar = document.getElementById("place-taskbar");
-                if (taskbar) {
-                    taskbar.innerHTML = data;
-                    initLinkInterception(taskbar);
-                }
-            });
-
-        return Promise.all([titlebarPromise, taskbarPromise]);
+        return Promise.resolve();
     })
     .then(() => {
         if (typeof window.initTaskbarClock === "function") {
             window.initTaskbarClock();
+        }
+
+        if (typeof window.initLinkInterception === "function") {
+            window.initLinkInterception(document);
         }
     })
     .catch(error => {

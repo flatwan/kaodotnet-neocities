@@ -18,7 +18,7 @@ Ca permet aux navigateurs d'automatiquement retélecharger l'image
 
 (sinon ça affiche toujours l'ancienne avec le cache).  
 
-ex: avant update: `<img src="./resources/flatwan.png?v=1">`  
+ex: avant update: `<img src="./resources/flatwan.png?v=2">`  
 
 après update: `<img src="./resources/flatwan.png?v=2">`
 
@@ -81,12 +81,12 @@ quand elle est survolée.
 ex:
 
 ```html
-<img class="logo rot_on_hover" src="./resources/flatwan.png?v=1">
+<img class="logo rot_on_hover" src="./resources/flatwan.png?v=2">
 ```
 
 rendu:
 
-<img class="logo rot_on_hover" src="./resources/flatwan.png?v=1" alt="monocouille">
+<img class="logo rot_on_hover" src="./resources/flatwan.png?v=2" alt="monocouille">
 
 ### change_on_hover
 
