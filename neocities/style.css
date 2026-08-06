@@ -16,6 +16,24 @@ body {
     /*Pour que la bot bar soit tout en bas dans tout les cas*/
     display: flex;
     flex-direction: column;
+
+/*CURSORS*/
+
+    cursor: none !important;
+}
+
+#cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 33px;
+    height: auto;
+
+    pointer-events: none;
+    z-index: 9999999;
+
+    image-rendering: pixelated;
 }
 
 main {

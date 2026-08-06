@@ -53,6 +53,8 @@
 
 
 /*BOTTOM (taskbar)*/
+
+
 #place-taskbar {
     margin-bottom: 5px; /*Pour que la taskbar soit pas par dessus des elements de la page*/
 }
@@ -105,4 +107,6 @@
     color: white;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
     white-space: nowrap;
+
+     cursor: none !important;
 }
