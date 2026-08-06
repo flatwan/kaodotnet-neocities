@@ -16,6 +16,27 @@ body {
     /*Pour que la bot bar soit tout en bas dans tout les cas*/
     display: flex;
     flex-direction: column;
+
+}
+
+/*CURSORS*/
+
+html * {
+    cursor: none !important;
+}
+
+#cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 24px;
+    height: auto;
+
+    pointer-events: none;
+    z-index: 9999999;
+
+    image-rendering: pixelated;
 }
 
 main {
@@ -92,6 +113,12 @@ main {
     background-size: cover;
     background-position: center;
 }
+.spamton {
+    background-image: url("./resources/spamton.png?v=1");
+    background-size: cover;
+    background-position: center;
+}
+
 /*Fenetre*/
 .window_bg { /*a mettre accompagne d'un fond ci dessous*/
     flex: 1 1 auto;
