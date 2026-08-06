@@ -21,22 +21,46 @@ body {
 
 /*CURSORS*/
 
-html * {
-    cursor: none !important;
+* {
+  cursor: url(./resources/cursorSD1.png), auto;
+  -webkit-animation: cursor 400ms infinite;
+  animation: cursor 400ms infinite;
 }
 
-#cursor {
-    position: fixed;
-    left: 0;
-    top: 0;
+@-webkit-keyframes cursor {
+  0% {cursor: url(./resources/cursorSD1.png), auto;}
+  50% {cursor: url(./resources/cursorSD2.png), auto;}
+  100% {cursor: url(./resources/cursorSD3.png), auto;}
 
-    width: 24px;
-    height: auto;
+} 
 
-    pointer-events: none;
-    z-index: 9999999;
+@keyframes cursor {
+  0% {cursor: url(./resources/cursorSD1.png), auto;}
+  50% {cursor: url(./resources/cursorSD2.png), auto;}
+  100% {cursor: url(./resources/cursorSD3.png), auto;}
+}
 
-    image-rendering: pixelated;
+a,
+button,
+input,
+a img
+{
+  cursor: url(./resources/cursorSD-hover1.png), auto;
+  -webkit-animation: hover 400ms infinite;
+  animation: hover 400ms infinite;
+}
+
+@-webkit-keyframes hover {
+  0% {cursor: url(./resources/cursorSD-hover1.png), auto;}
+  50% {cursor: url(./resources/cursorSD-hover2.png), auto;}
+  100% {cursor: url(./resources/cursorSD-hover3.png), auto;}
+
+} 
+
+@keyframes hover {
+  0% {cursor: url(./resources/cursorSD-hover1.png), auto;}
+  50% {cursor: url(./resources/cursorSD-hover2.png), auto;}
+  100% {cursor: url(./resources/cursorSD-hover3.png), auto;}
 }
 
 main {
