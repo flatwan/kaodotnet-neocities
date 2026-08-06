@@ -2,35 +2,50 @@
 
 <html class="desktop_bg2">
     <head>
-        <title>flatwan</title>
-        <link rel="icon" type="image/x-icon" href="./resources/flatwan.png?v=1">
+        <title>flatwans</title>
+        <link rel="icon" type="image/x-icon" href="./resources/about_icon.png?v=3">
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="./style.css?v=3" rel="stylesheet" type="text/css" media="all">
+        <link href="./window.css?v=1" rel="stylesheet" type="text/css" media="all">
         <link href="./components/bars.css?v=2" rel="stylesheet" type="text/css" media="all">
     </head>
 
-
     <body>
         <main>
-            <div id="presentation" style='font-family: "Dreamland"; letter-spacing: 2%;'>
-                <p>Hi I'm flatwan.</p>
-                <p>evil flatwan be like 
-                    <br>|
-                    <br>V
-                </p>
+            <div id="place-msn"></div>
 
-                <img src="./resources/cassette_beasts.png?v=1" width="30%" alt="(color inverted) My OC (a man wearing a traffic cone on his head) sitting on top of a Lobstacle from Cassette Beasts.">
+            <div style="padding-left:10vw"></div>
+
+            <!-- FENETRE CHAT -->
+            <div class="frame window">
+                <div class="window-titlebar">
+                    <div class="window-titlebar-left">
+                        <img src="./resources/ttbar_icon-bggrad.png?v=1" height="42px">
+                        <h2 class="window-titlebar-title">flatwan</h2>
+                    </div>
+
+                    <div class="window-titlebar-buttons">
+                        <h2><a class="plain_link" href="./index.html"><img src="./resources/ttbar_icon-close.png?v=2" alt="red cross (close window)" width="26px" height="24px"></a></h2>
+                    </div>
+                </div>
+
+                <hr class="window-seperation">
+                <!-- Contenu de la fenetre -->
+                <div class="window-content">
+                    <h1>Hi I'm flatwan.</h1>
+                </div>
             </div>
         </main>
 
-        
+
         <div id="place-taskbar"></div>
     </body>
-
+    
     <script src="./js/include.js?v=1"></script>
+    <script src="./js/copy.js"></script>
     <script src="./js/load.js?v=1"></script>
     <script src="./js/cursor.js?v=4"></script>
 </html>

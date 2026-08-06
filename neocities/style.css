@@ -49,7 +49,9 @@ main {
     align-content: flex-start;
     min-height: 0;
     overflow: hidden;
-    max-height: calc(100% - 85px); /*pour compter les margin et pas depasser de la page*/
+    height: calc(100vh - 85px);
+    max-height: calc(100vh - 85px); /*pour compter les margin et pas depasser de la page*/
+    box-sizing: border-box;
 }
 /* 
 #main {
