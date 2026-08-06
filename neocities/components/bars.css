@@ -92,13 +92,19 @@
 .icon img {
     height: 80px;
     width: auto;
+    transform-origin: bottom center;
 }
-.bright_bg_hover {
+.icon:hover img {
+    transform: scale(1.5);
+}
+/* .bright_bg_hover {
     transition: background-color 0.5s ease;
 }
 .bright_bg_hover:hover {
     background-color: rgba(255, 255, 255, 0.4);
-}
+} */
+
+
 #taskbar-credits {
     margin-right: 2vh;
     margin-left: auto;
