@@ -100,7 +100,9 @@ main {
     margin-right: 5vw;
     flex: 1 1 auto;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
     min-height: 0;
     overflow: hidden;
     max-height: calc(100% - 85px); /*pour compter les margin et pas depasser de la page*/
