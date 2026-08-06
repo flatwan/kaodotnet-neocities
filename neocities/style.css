@@ -17,8 +17,11 @@ body {
     display: flex;
     flex-direction: column;
 
+}
+
 /*CURSORS*/
 
+html * {
     cursor: none !important;
 }
 
@@ -27,7 +30,7 @@ body {
     left: 0;
     top: 0;
 
-    width: 33px;
+    width: 24px;
     height: auto;
 
     pointer-events: none;

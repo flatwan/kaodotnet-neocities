@@ -2,6 +2,7 @@ const cursor = document.createElement("img");
 
 cursor.id = "cursor";
 cursor.alt = "";
+cursor.setAttribute("aria-hidden", "true");
 
 document.body.appendChild(cursor);
 
@@ -24,11 +25,6 @@ let frame = 0;
 
 cursor.src = cursors.normal[0];
 
-document.addEventListener("mousemove", (event) => {
-    cursor.style.left = `${event.clientX}px`;
-    cursor.style.top = `${event.clientY}px`;
-});
-
 function setCursor(type) {
     if (currentCursor === type) {
         return;
@@ -36,40 +32,45 @@ function setCursor(type) {
 
     currentCursor = type;
     frame = 0;
-    cursor.src = cursors[currentCursor][0];
+    cursor.src = cursors[type][0];
 }
 
 function isClickable(element) {
-    return element.closest(
-        "a, button, .explorer_icon, [onclick], [ondblclick]"
+    if (!(element instanceof Element)) {
+        return false;
+    }
+
+    return Boolean(
+        element.closest(
+            "a, button, .explorer_icon, [onclick], [ondblclick]"
+        )
     );
 }
 
-document.addEventListener("mouseover", (event) => {
+document.addEventListener("mousemove", (event) => {
+    cursor.style.left = `${event.clientX}px`;
+    cursor.style.top = `${event.clientY}px`;
+
     if (isClickable(event.target)) {
         setCursor("hover");
-    }
-});
-
-document.addEventListener("mouseout", (event) => {
-    const clickableElement = isClickable(event.target);
-
-    if (!clickableElement) {
-        return;
-    }
-
-    const nextElement = event.relatedTarget;
-
-    if (!nextElement || !clickableElement.contains(nextElement)) {
+    } else {
         setCursor("normal");
     }
 });
 
-setInterval(() => {
-    const currentFrames = cursors[currentCursor];
+document.addEventListener("mouseleave", () => {
+    cursor.style.display = "none";
+});
 
-    frame = (frame + 1) % currentFrames.length;
-    cursor.src = currentFrames[frame];
+document.addEventListener("mouseenter", () => {
+    cursor.style.display = "block";
+});
+
+setInterval(() => {
+    const frames = cursors[currentCursor];
+
+    frame = (frame + 1) % frames.length;
+    cursor.src = frames[frame];
 }, 100);
 
 cursor.addEventListener("error", () => {
