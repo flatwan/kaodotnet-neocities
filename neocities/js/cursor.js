@@ -8,15 +8,15 @@
 
 // const cursors = {
 //     normal: [
-//         "./resources/cursorHD1.png",
-//         "./resources/cursorHD2.png",
-//         "./resources/cursorHD3.png"
+//         "./resources/cursorSD1.png",
+//         "./resources/cursorSD2.png",
+//         "./resources/cursorSD3.png"
 //     ],
 
 //     hover: [
-//         "./resources/cursorHD-hover1.png",
-//         "./resources/cursorHD-hover2.png",
-//         "./resources/cursorHD-hover3.png"
+//         "./resources/cursorSD-hover1.png",
+//         "./resources/cursorSD-hover2.png",
+//         "./resources/cursorSD-hover3.png"
 //     ]
 // };
 

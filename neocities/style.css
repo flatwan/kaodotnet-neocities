@@ -22,22 +22,22 @@ body {
 /*CURSORS*/
 
 * {
-  cursor: url(./resources/cursorHD1.png), auto;
+  cursor: url(./resources/cursorSD1.png), auto;
   -webkit-animation: cursor 400ms infinite;
   animation: cursor 400ms infinite;
 }
 
 @-webkit-keyframes cursor {
-  0% {cursor: url(./resources/cursorHD1.png), auto;}
-  50% {cursor: url(./resources/cursorHD2.png), auto;}
-  100% {cursor: url(./resources/cursorHD3.png), auto;}
+  0% {cursor: url(./resources/cursorSD1.png), auto;}
+  50% {cursor: url(./resources/cursorSD2.png), auto;}
+  100% {cursor: url(./resources/cursorSD3.png), auto;}
 
 } 
 
 @keyframes cursor {
-  0% {cursor: url(./resources/cursorHD1.png), auto;}
-  50% {cursor: url(./resources/cursorHD2.png), auto;}
-  100% {cursor: url(./resources/cursorHD3.png), auto;}
+  0% {cursor: url(./resources/cursorSD1.png), auto;}
+  50% {cursor: url(./resources/cursorSD2.png), auto;}
+  100% {cursor: url(./resources/cursorSD3.png), auto;}
 }
 
 a,
@@ -45,22 +45,22 @@ button,
 input,
 a img
 {
-  cursor: url(./resources/cursorHD-hover1.png), auto;
+  cursor: url(./resources/cursorSD-hover1.png), auto;
   -webkit-animation: hover 400ms infinite;
   animation: hover 400ms infinite;
 }
 
 @-webkit-keyframes hover {
-  0% {cursor: url(./resources/cursorHD-hover1.png), auto;}
-  50% {cursor: url(./resources/cursorHD-hover2.png), auto;}
-  100% {cursor: url(./resources/cursorHD-hover3.png), auto;}
+  0% {cursor: url(./resources/cursorSD-hover1.png), auto;}
+  50% {cursor: url(./resources/cursorSD-hover2.png), auto;}
+  100% {cursor: url(./resources/cursorSD-hover3.png), auto;}
 
 } 
 
 @keyframes hover {
-  0% {cursor: url(./resources/cursorHD-hover1.png), auto;}
-  50% {cursor: url(./resources/cursorHD-hover2.png), auto;}
-  100% {cursor: url(./resources/cursorHD-hover3.png), auto;}
+  0% {cursor: url(./resources/cursorSD-hover1.png), auto;}
+  50% {cursor: url(./resources/cursorSD-hover2.png), auto;}
+  100% {cursor: url(./resources/cursorSD-hover3.png), auto;}
 }
 
 main {
