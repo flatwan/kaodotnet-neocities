@@ -2,34 +2,49 @@
 
 <html class="desktop_bg2">
     <head>
-        <title>ABOUT US</title>
+        <title>About us</title>
         <link rel="icon" type="image/x-icon" href="./resources/about_icon.png?v=3">
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="./style.css?v=3" rel="stylesheet" type="text/css" media="all">
+        <link href="./window.css?v=1" rel="stylesheet" type="text/css" media="all">
         <link href="./components/bars.css?v=2" rel="stylesheet" type="text/css" media="all">
     </head>
 
     <body>
         <main>
-            <h1>WHO TF ARE WE ?</h1>
-            <p style="color: purple">We're a indie studio and uuuh the other guy will explain it better than me</p>
-            <p style="color: #A83434">Hi, i'm the other guy. We are an indie studio, driven by the ambition to make whatever we want, for the sake of it (i stole it for "juice box factory")</p>
-            <p style="color: #A83434">Also the first guy is gay</p>
-            <p style="color: purple">Can't deny facts</p>
+            <div id="place-msn"></div>
 
-            <h2>Members:</h2>
-            <section id="members" style="gap:1%" class="warp-flex-align">
-                <a href="./flatwan.html" style="gap:3%" class="warp-flex-align under_link"><img class="logo rot_on_hover" src="./resources/flatwan.png?v=2" alt="flatwan profile pic (Traffic cone on head guy)" >flatwan</a>
-                <a href="./cherry.html" style="gap:3%" class="warp-flex-align under_link"><img class="logo rot_on_hover" src="./resources/cherry.png?v=1" alt="Cherry profile pic (TV eyed anime style albino boy" >Ch3rry</a>
-            </section>
+            <div style="padding-left:10vw"></div>
+            
+            <!-- FENETRE CHAT -->
+            <div class="frame window">
+                <div class="window-titlebar">
+                    <div class="window-titlebar-left">
+                        <img src="./resources/ttbar_icon-bggrad.png?v=1" height="42px">
+                        <h2 class="window-titlebar-title">Select a contact</h2>
+                    </div>
+
+                    <div class="window-titlebar-buttons">
+                        <h2><a class="plain_link" href="./index.html"><img src="./resources/ttbar_icon-close.png?v=2" alt="red cross (close window)" width="26px" height="24px"></a></h2>
+                    </div>
+                </div>
+
+                <hr class="window-seperation">
+                <!-- Contenu de la fenetre -->
+                <div class="window-content">
+                    <h1>Select a contact to see its profile.</h1>
+                </div>
+            </div>
         </main>
+
 
         <div id="place-taskbar"></div>
     </body>
     
     <script src="./js/include.js?v=1"></script>
+    <script src="./js/copy.js"></script>
     <script src="./js/load.js?v=1"></script>
 </html>
