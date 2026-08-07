@@ -68,10 +68,11 @@ main {
     margin-right: 5vw;
     flex: 1 1 auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: flex-start;
     align-content: flex-start;
     min-height: 0;
+    min-width: 0;
     overflow: hidden;
     height: calc(100vh - 85px);
     max-height: calc(100vh - 85px); /*pour compter les margin et pas depasser de la page*/
@@ -251,7 +252,9 @@ main {
 
     background-color: white;
 
-    width: fit-content;
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
     max-width: 100%;
 
     box-sizing: border-box;
