@@ -138,11 +138,6 @@ main {
     background-size: cover;
     background-position: center;
 }
-.spamton {
-    background-image: url("./resources/spamton.png?v=1");
-    background-size: cover;
-    background-position: center;
-}
 
 /*Fenetre*/
 .window_bg { /*a mettre accompagne d'un fond ci dessous*/
@@ -252,10 +247,11 @@ main {
 
     background-color: white;
 
-    flex: 1 1 0;
+    flex: 0 1 auto;
     min-width: 0;
     width: auto;
-    max-width: 100%;
+    max-width: fit-content;
+    align-self: flex-start;
 
     box-sizing: border-box;
 
