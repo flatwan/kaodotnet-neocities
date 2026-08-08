@@ -214,6 +214,13 @@ function navigateTo(url, replaceState = false) {
             swapMainContent(newDoc);
             const contentRoot = document.querySelector('[data-page-content]') || document.querySelector('main');
             runInlineScripts(contentRoot);
+
+            if (replaceState) {
+                history.replaceState({ url: targetUrl.pathname }, document.title, targetUrl.pathname);
+            } else {
+                history.pushState({ url: targetUrl.pathname }, document.title, targetUrl.pathname);
+            }
+
             initLinkInterception(document);
 
             const newScripts = Array.from(newDoc.querySelectorAll('script[src]')).map(script => script.getAttribute('src')).filter(Boolean);
@@ -230,13 +237,6 @@ function navigateTo(url, replaceState = false) {
                 applyTitlebarTitle();
                 window.scrollTo(0, 0);
             });
-        })
-        .then(() => {
-            if (replaceState) {
-                history.replaceState({ url: targetUrl.pathname }, document.title, targetUrl.pathname);
-            } else {
-                history.pushState({ url: targetUrl.pathname }, document.title, targetUrl.pathname);
-            }
         })
         .catch(error => {
             console.error(error);
@@ -256,7 +256,7 @@ window.addEventListener('DOMContentLoaded', () => {
     applyTitlebarTitle();
 });
 
-loadScript("./js/time.js")
+loadScript("../js/time.js")
     .then(() => {
         if (typeof window.loadSharedIncludes === "function") {
             return window.loadSharedIncludes(document);
