@@ -88,7 +88,7 @@
     background-repeat: no-repeat;
 }
 .window-content.spamton {
-    background-image: url("./resources/spamton.png?v=1");
+    background-image: url("./resources/img/spamton.png?v=1");
     background-size: cover;
     background-position: center;
 }

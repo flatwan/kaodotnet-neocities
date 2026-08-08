@@ -97,7 +97,7 @@ quand il est survolé.
 ex:
 
 ```html
-<a href="./index.html" class="change_on_hover">
+<a href="../main/index.html" class="change_on_hover">
     <span class="no_change"><strong>kao(dot)net</strong></span>
     <span class="change"><strong>K40(D0T)N3T</strong></span>
 </a>
@@ -106,7 +106,7 @@ ex:
 
 rendu:
 
-<a href="./index.html" class="change_on_hover">
+<a href="../main/index.html" class="change_on_hover">
     <span class="no_change"><strong>kao(dot)net</strong></span>
     <span class="change"><strong>K40(D0T)N3T</strong></span>
 </a>
