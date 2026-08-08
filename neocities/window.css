@@ -81,6 +81,7 @@
     height: auto;
     overscroll-behavior: contain;
 }
+/* FONDS DE FENETRE */
 .window-content.normal {
     background-image: url("./resources/window-grad_bg.png?v=1");
     background-position: bottom right;
@@ -91,6 +92,12 @@
     background-image: url("./resources/spamton.png?v=1");
     background-size: cover;
     background-position: center;
+}
+.window-content.blueprint {
+    background-image: url("./resources/blueprint.png?v=1");
+    background-size: cover;
+    background-position: right top;
+    color:white;
 }
 
 
