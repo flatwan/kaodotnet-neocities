@@ -26,7 +26,7 @@
     align-items: center;
     justify-content: space-between;
 
-    background-image: url("./resources/ttbar-grad.png?v=1");
+    background-image: url("./resources/img/ttbar-grad.png?v=1");
     background-size: auto 32px;
 
     height: 32px;
@@ -81,7 +81,7 @@
     height: auto;
     overscroll-behavior: contain;
 
-    background-image: url("./resources/window-grad_bg.png?v=1");
+    background-image: url("./resources/img/window-grad_bg.png?v=1");
     background-position: bottom right;
     background-size: cover;
     background-repeat: no-repeat;

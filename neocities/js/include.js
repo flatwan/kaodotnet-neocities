@@ -63,14 +63,14 @@ function loadSharedIncludes(root = document, options = {}) {
     const taskbar = root.getElementById("place-taskbar");
     const msn = root.getElementById("place-msn");
 
-    const titlebarPromise = loadComponentIntoElement(titlebar, "./components/top_bar.html", () => {
+    const titlebarPromise = loadComponentIntoElement(titlebar, "../components/top_bar.html", () => {
         if (typeof window.applyTitlebarTitle === "function") {
             window.applyTitlebarTitle();
         }
     });
 
-    const taskbarPromise = loadComponentIntoElement(taskbar, "./components/bot_bar.html");
-    const msnPromise = loadComponentIntoElement(msn, "./components/msn.html", null, { forceRefresh });
+    const taskbarPromise = loadComponentIntoElement(taskbar, "../components/bot_bar.html");
+    const msnPromise = loadComponentIntoElement(msn, "../components/msn.html", null, { forceRefresh });
 
     return Promise.all([titlebarPromise, taskbarPromise, msnPromise]);
 }

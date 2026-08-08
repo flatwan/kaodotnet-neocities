@@ -3,8 +3,8 @@
 <!-- Fait pas gaffe a ca -->
 
 
-        <link href="./style.css?v=3" rel="stylesheet" type="text/css" media="all">
-        <link href="./components/bars.css?v=2" rel="stylesheet" type="text/css" media="all">
+        <link href="../style.css?v=3" rel="stylesheet" type="text/css" media="all">
+        <link href="../components/bars.css?v=2" rel="stylesheet" type="text/css" media="all">
 
 (Tu peux ouvrir le fichier dans ton navigateur
 pour avoir un meilleur affichage stv)
@@ -18,9 +18,9 @@ Ca permet aux navigateurs d'automatiquement retélecharger l'image
 
 (sinon ça affiche toujours l'ancienne avec le cache).  
 
-ex: avant update: `<img src="./resources/flatwan.png?v=2">`  
+ex: avant update: `<img src="../resources/flatwan.png?v=2">`  
 
-après update: `<img src="./resources/flatwan.png?v=2">`
+après update: `<img src="../resources/flatwan.png?v=2">`
 
 ## CLASS CUSTOMS
 
@@ -65,7 +65,7 @@ ex:
 /* css */
 
 .desktop_bg {
-    background-image: url("./resources/bliss.jpg?v=1");
+    background-image: url("../resources/bliss.jpg?v=1");
     background-size: cover;
 }
 ```
@@ -81,12 +81,12 @@ quand elle est survolée.
 ex:
 
 ```html
-<img class="logo rot_on_hover" src="./resources/flatwan.png?v=2">
+<img class="logo rot_on_hover" src="../resources/flatwan.png?v=2">
 ```
 
 rendu:
 
-<img class="logo rot_on_hover" src="./resources/flatwan.png?v=2" alt="monocouille">
+<img class="logo rot_on_hover" src="../resources/flatwan.png?v=2" alt="monocouille">
 
 ### change_on_hover
 
