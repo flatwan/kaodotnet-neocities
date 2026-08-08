@@ -45,7 +45,7 @@
 /* INUTILISE */
 /* #construction {
     background-color: #FFD800;
-    background-image: url("../resources/construction.png");
+    background-image: url("../resources/img/construction.png");
     background-repeat:repeat-x;
     color:white;
     text-shadow: black 2px 2px;
@@ -63,7 +63,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-image: url("../resources/botbar-grad.png?v=1");
+    background-image: url("../resources/img/botbar-grad.png?v=1");
     background-repeat: repeat-x;
     background-size: auto 80px;
     color: white;

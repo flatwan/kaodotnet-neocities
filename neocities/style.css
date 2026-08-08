@@ -22,22 +22,22 @@ body {
 /*CURSORS*/
 
 * {
-  cursor: url(./resources/cursorSD1.png), auto;
+  cursor: url(./resources/img/cursorSD1.png), auto;
   -webkit-animation: cursor 400ms infinite;
   animation: cursor 400ms infinite;
 }
 
 @-webkit-keyframes cursor {
-  0% {cursor: url(./resources/cursorSD1.png), auto;}
-  50% {cursor: url(./resources/cursorSD2.png), auto;}
-  100% {cursor: url(./resources/cursorSD3.png), auto;}
+  0% {cursor: url(./resources/img/cursorSD1.png), auto;}
+  50% {cursor: url(./resources/img/cursorSD2.png), auto;}
+  100% {cursor: url(./resources/img/cursorSD3.png), auto;}
 
 } 
 
 @keyframes cursor {
-  0% {cursor: url(./resources/cursorSD1.png), auto;}
-  50% {cursor: url(./resources/cursorSD2.png), auto;}
-  100% {cursor: url(./resources/cursorSD3.png), auto;}
+  0% {cursor: url(./resources/img/cursorSD1.png), auto;}
+  50% {cursor: url(./resources/img/cursorSD2.png), auto;}
+  100% {cursor: url(./resources/img/cursorSD3.png), auto;}
 }
 
 a,
@@ -45,22 +45,22 @@ button,
 input,
 a img
 {
-  cursor: url(./resources/cursorSD-hover1.png), auto;
+  cursor: url(./resources/img/cursorSD-hover1.png), auto;
   -webkit-animation: hover 400ms infinite;
   animation: hover 400ms infinite;
 }
 
 @-webkit-keyframes hover {
-  0% {cursor: url(./resources/cursorSD-hover1.png), auto;}
-  50% {cursor: url(./resources/cursorSD-hover2.png), auto;}
-  100% {cursor: url(./resources/cursorSD-hover3.png), auto;}
+  0% {cursor: url(./resources/img/cursorSD-hover1.png), auto;}
+  50% {cursor: url(./resources/img/cursorSD-hover2.png), auto;}
+  100% {cursor: url(./resources/img/cursorSD-hover3.png), auto;}
 
 } 
 
 @keyframes hover {
-  0% {cursor: url(./resources/cursorSD-hover1.png), auto;}
-  50% {cursor: url(./resources/cursorSD-hover2.png), auto;}
-  100% {cursor: url(./resources/cursorSD-hover3.png), auto;}
+  0% {cursor: url(./resources/img/cursorSD-hover1.png), auto;}
+  50% {cursor: url(./resources/img/cursorSD-hover2.png), auto;}
+  100% {cursor: url(./resources/img/cursorSD-hover3.png), auto;}
 }
 
 main {
@@ -98,15 +98,15 @@ main {
 /*FONTS FAMILIES*/
 @font-face { 
 	font-family: "VCR"; 
-	src: url("./resources/VCR_OSD_MONO_1.001.ttf");
+	src: url("./resources/fonts/VCR_OSD_MONO_1.001.ttf");
 }
 @font-face { 
 	font-family: "BIOS"; 
-	src: url("./resources/windows-command-prompt-regular.ttf");
+	src: url("./resources/fonts/windows-command-prompt-regular.ttf");
 }
 @font-face { 
 	font-family: "Dreamland"; 
-	src: url("./resources/DreamlandProRg.OTF");
+	src: url("./resources/fonts/DreamlandProRg.OTF");
 }
 
 .logo {
@@ -119,22 +119,27 @@ main {
 /*FONDS*/
 /*Bureau*/
 .desktop_bg1 {
-    background-image: url("./resources/pose1.png?v=1"),url("./resources/bliss.jpg?v=1");
+    background-image: url("./resources/img/pose1.png?v=1"),url("./resources/img/bliss.jpg?v=1");
     background-size: cover;
     background-position: center;
 }
 .desktop_bg2 {
-    background-image: url("./resources/pose2.png?v=1"),url("./resources/bliss.jpg?v=1");
+    background-image: url("./resources/img/pose2.png?v=1"),url("./resources/img/bliss.jpg?v=1");
     background-size: cover;
     background-position: center;
 }
 .desktop_bg3 {
-    background-image: url("./resources/pose3.png?v=1"),url("./resources/bliss.jpg?v=1");
+    background-image: url("./resources/img/pose3.png?v=1"),url("./resources/img/bliss.jpg?v=1");
     background-size: cover;
     background-position: center;
 }
 .desktop_bg4 {
-    background-image: url("./resources/pose4.png?v=1"),url("./resources/bliss.jpg?v=1");
+    background-image: url("./resources/img/pose4.png?v=1"),url("./resources/img/bliss.jpg?v=1");
+    background-size: cover;
+    background-position: center;
+}
+.spamton {
+    background-image: url("./resources/img/spamton.png?v=1");
     background-size: cover;
     background-position: center;
 }
@@ -149,11 +154,11 @@ main {
     max-height: 100%;
 }
 .frutiger_bliss_bg {
-    background-image: url("./resources/frutiger_bliss.png?v=1");
+    background-image: url("./resources/img/frutiger_bliss.png?v=1");
     background-size: cover;
 }
 .missing_bg {
-    background-image: url("./resources/missing.png");
+    background-image: url("./resources/img/missing.png");
     background-repeat: repeat;
     background-size:25%;
 }
