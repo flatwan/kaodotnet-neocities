@@ -87,7 +87,7 @@ main {
     overflow: hidden;
 } */
 
-#todo {
+.tasklist {
     min-height: 0;
     overflow-y: auto;
     overflow-x: hidden;
@@ -267,9 +267,12 @@ main {
 
     overflow: hidden;
 }
-/* .full_hr {
-    display: block;
-    border: 0;
-    border-top: 0.2vw solid black;
+
+.clear_list {
+    line-height: 130%;
 }
-*/
+
+.date {
+    background-color: rgba(232, 244, 255, 0.378);
+    font-weight: bold;
+}
