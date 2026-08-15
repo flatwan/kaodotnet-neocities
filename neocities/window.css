@@ -46,12 +46,17 @@
     padding-left: 0.5em;
 
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
 }
 .window-titlebar-left {
     display: flex;
     align-items: center;
     margin-left: 0;
     padding-left: 0;
+    flex: 1;
+    min-width: 0;
 }
 .window-titlebar-buttons {
     margin: 0;
